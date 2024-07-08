@@ -1,0 +1,235 @@
+/* IMPORTING FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* VARIABLE DECLARATIONS */
+
+:root {
+    --font-family: "Outfit", sans-serif;
+    --position-relative: relative;
+    --position-absolute: absolute;
+    --position-initial: initial;
+    --position-fixed: fixed;
+    --display-flex: flex;
+    --display-block: block;
+    --display-none: none;
+    --display-inline-block: inline-block;
+    --width-hundred: 100%;
+    --purple: #5f39ff;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #64748b;
+    --light-gray: #c8c8c8;
+    --dark-gray: #464646;
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --center: center;
+    --auto: auto;
+    --z-index-strong: 1030;
+    --z-index-minus: -1;
+    --transition: all 0.5s ease;
+    --other-transition: all 0.4s ease-in-out;
+    --switch-transition: 0.15s ease-in-out;
+    --opacity-half: 0.5;
+    --opacity-full: 1;
+    --hidden: hidden;
+    --cover: cover;
+    --background-noRepeat: no-repeat;
+    --text-uppercase: uppercase;
+    --text-capitalize: capitalize;
+    --font-size-small: 12px;
+    --btn-padding: 10px 28px;
+    --btn-rounded-padding: 20px 40px;
+    --btn-border-radius: 6px;
+    --btn-background: linear-gradient(to right, #5f39ff, #0070ff, #008cff, #009cff, #00a6c7, #00ad82);
+    --btn-hover-background: linear-gradient(to right, #00ad82, #00a6c7, #5f39ff);
+}
+
+/* MEDIA QUERY BREAKPOINTS */
+
+$mobile-size: 320px;
+$tablet-size: 767px;
+$large-tablet-size: 991px;
+$x-large-tablet-size: 1024px;
+$small-laptop-size: 1199px;
+$medium-laptop-size: 1326px;
+$laptop-size: 1440px;
+
+/* GLOBAL STYLES */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: var(--display-none);
+    transition: var(--transition);
+}
+
+img {
+    max-width: var(--width-hundred);
+}
+
+button,
+button:focus {
+    outline: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: var(--display-none);
+    }
+}
+
+.showDesktop {
+    display: contents;
+}
+
+.showMobile {
+    display: none;
+}
+
+/* TITLES */
+
+.title {
+    h2 {
+        color: var(--purple);
+        position: var(--position-relative);
+        margin-bottom: 62px;
+
+        &.white {
+            color: var(--white);
+        }
+
+        @media screen and (max-width: $large-tablet-size) {
+            margin-bottom: 30px;
+        }
+
+        &::before {
+            content: "";
+            position: var(--position-absolute);
+            left: 0;
+            bottom: -10px;
+            width: 159px;
+            height: 5px;
+            background: linear-gradient(90deg, #5f39ff 0%, #0070ff 33.32%, #008cff 67%, #009cff 100%);
+
+            @media screen and (max-width: $large-tablet-size) {
+                width: 70px;
+            }
+        }
+    }
+}
+
+/* FORM STYLES */
+
+.wpcf7-response-output {
+    text-align: center;
+}
+
+.newsLetter__wrap .wpcf7-response-output {
+    border-color: var(--white);
+}
+
+.newsLetter__wrap .wpcf7 form.sent .wpcf7-response-output {
+    border-color: var(--white);
+}
+
+.form-control,
+.wpcf7-form-control {
+    padding-left: 0;
+    color: var(--dark-gray);
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    border: var(--display-none);
+    border-bottom: 1px solid var(--light-gray);
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    padding-bottom: 6px;
+}
+
+.form-control:focus,
+.wpcf7-form-control:focus {
+    border: var(--display-none);
+    border-bottom: 3px solid var(--light-gray);
+    border-radius: 0;
+    box-shadow: var(--display-none);
+}
+
+.form-control::placeholder,
+.wpcf7-form-control::placeholder {
+    color: var(--dark-gray);
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+}
+
+textarea {
+    resize: var(--display-none);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: $small-laptop-size) {
+    .wpcf7-response-output {
+        text-align: center;
+        border-color: var(--black);
+        margin-top: 0;
+    }
+
+    .wpcf7 form.sent .wpcf7-response-output {
+        border-color: var(--black);
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: $large-tablet-size) {
+    .showDesktop {
+        display: none;
+    }
+
+    .showMobile {
+        display: contents;
+    }
+}
+
+@media screen and (max-width: $tablet-size) {
+    .form-control,
+    .form-control::placeholder {
+        font-size: 16px;
+    }
+
+    .rowResponsiveReverse {
+        flex-flow: column-reverse;
+    }
+}
+
+/* IMPORTING SECTIONS STYLESHEETS */
+
+@import "./Typography/Typography.scss";
+@import "./Container/Container.scss";
+@import "./Buttons/Buttons.scss";
+@import "./Spacing/Spacing.scss";
+@import "./Navbar/Navbar.scss";
+@import "./HeroBanner/HeroBanner.scss";
+@import "./OneStopWebSolution/OneStopWebSolution.scss";
+@import "./HowItWorks/HowItWorks.scss";
+@import "./PricingPlans/PricingPlans.scss";
+@import "./WhyChoose/WhyChoose.scss";
+@import "./FAQ/FAQ.scss";
+@import "./ContactUs/ContactUs.scss";
+@import "./NewsLetter/NewsLetter.scss";
+@import "./SecondaryHeroBanner/SecondaryHeroBanner.scss";
+@import "./ZeroObligationsChat/ZeroObligationsChat.scss";
+@import "./PrivacyPolicy/PrivacyPolicy.scss";
+@import "./PageNotFound/PageNotFound.scss";
+@import "./Footer/Footer.scss";

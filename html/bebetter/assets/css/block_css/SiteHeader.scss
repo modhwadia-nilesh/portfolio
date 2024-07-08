@@ -1,0 +1,264 @@
+@import "../variable.scss";
+
+.site__header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: 0.5s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &.navbar-down {
+        transform: translate3d(0px, 0px, 0px);
+        background-color: $darkGrey;
+        box-shadow: 0px 4px 25.29px 0px #000000ab;
+    }
+
+    &.navbar-up {
+        transform: translate3d(0px, -76px, 0px);
+    }
+
+    .navbar {
+        padding: 24px 0;
+
+        .logo {
+            img {
+                max-width: 200px;
+            }
+        }
+
+        .navbar-toggler {
+            border: 0;
+            padding: 0;
+            transition: box-shadow 0.15s ease-in-out,
+                -webkit-box-shadow 0.15s ease-in-out;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            span {
+                background-image: url("../images/closeIcon.svg");
+            }
+
+            &.navbar-toggler.collapsed {
+                span {
+                    background-image: url("../images/menuIcon.svg");
+                }
+            }
+        }
+
+        .navbar-collapse {
+            gap: 40px;
+            align-items: center;
+
+            .navbar-nav {
+                gap: 40px;
+
+                .nav-item {
+                    .nav-link {
+                        padding: 13px 0;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: $white;
+                    }
+
+                    &:hover {
+                        .nav-link {
+                            color: $orange;
+                        }
+                    }
+                }
+
+                .dropdown {
+                    position: relative;
+
+                    .nav-link {
+                        padding-right: 23px;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 14px;
+                        height: 14px;
+                        background: url("../images/upArrowIcon.svg") no-repeat;
+                        background-size: cover;
+                        right: 0;
+                        top: 16px;
+                        transition: all 0.5s;
+                        transform: rotate(180deg);
+                    }
+
+                    &::after {
+                        display: none;
+                        right: 2px;
+                        top: 5px;
+                    }
+
+                    &.iconChange {
+                        &::after {
+                            transform: rotate(0deg);
+                        }
+                    }
+
+                    .dropdown-menu {
+                        padding: 0;
+                        position: absolute;
+                        left: 0;
+                        top: 45px;
+                        width: max-content;
+                        min-width: 160px;
+                        border-radius: 0;
+                        background-color: $white;
+                        border: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.3s;
+
+                        .menu-item {
+                            line-height: 19px;
+
+                            .menu-link {
+                                width: 100%;
+                                display: inline-block;
+                                font-size: 16px;
+                                font-weight: 500;
+                                padding: 10px;
+                                line-height: normal;
+                                color: $black;
+
+                                &:hover {
+                                    color: $white;
+                                    background-color: $orange;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        &::before {
+                            background: url("../images/orangeUpArrow.svg") no-repeat;
+                            background-size: cover;
+                            transform: rotate(0deg);
+                        }
+
+                        .dropdown-menu {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .site__header {
+        .navbar {
+            padding: 8px 0;
+
+            .navbar-collapse {
+                gap: 30px;
+
+                .navbar-nav {
+                    gap: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .site__header {
+        background-color: $darkGrey;
+
+        .navbar {
+            .logo {
+                margin-left: -5px;
+            }
+
+            .navbar-collapse {
+                .navbar-nav {
+                    gap: 0px;
+                    padding-top: 20px;
+                    margin-bottom: 20px;
+                    max-height: calc(100vh - 140px);
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+
+                    .nav-item {
+                        display: block;
+                        width: 100%;
+                        padding-right: 0;
+
+                        .nav-link {
+                            display: inline-block;
+                            max-width: 100%;
+                            padding: 0;
+                            padding-bottom: 6px;
+                        }
+
+                        &:hover {
+                            .nav-link {
+                                color: $white;
+                            }
+                        }
+                    }
+
+                    .nav-item+.nav-item {
+                        margin-top: 14px;
+                    }
+
+                    .dropdown {
+                        &::before {
+                            display: none;
+                        }
+
+                        &::after {
+                            display: block;
+                        }
+
+                        .dropdown-menu {
+                            width: 100%;
+                            position: initial;
+                            opacity: 1;
+                            visibility: visible;
+                            transition: none;
+
+                            .menu-item {
+                                display: block;
+                                width: 100%;
+
+                                .menu-link {
+                                    display: block;
+                                    max-width: 100%;
+                                    padding: 8px 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .button-primary {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .site__header {
+        .navbar {
+            .logo {
+                img {
+                    max-width: 160px;
+                }
+            }
+        }
+    }
+}

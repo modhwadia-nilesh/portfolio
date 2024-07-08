@@ -1,0 +1,187 @@
+.contactUs {
+    background-color: var(--purple);
+
+    h2 {
+        color: var(--white);
+        font-size: 48px;
+    }
+
+    &__reachOut {
+        margin: 90px 0px;
+        li {
+            cursor: pointer;
+            color: var(--white);
+            moz-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+            padding: 19px;
+
+            &.active {
+                background-color: var(--white);
+                border-radius: 16px;
+
+                a {
+                    color: var(--purple);
+                }
+
+                .onHover {
+                    display: inline-block;
+                    vertical-align: sub;
+                }
+
+                .offHover {
+                    display: var(--display-none);
+                }
+            }
+
+            &:hover {
+                background-color: var(--white);
+                border-radius: 16px;
+
+                a {
+                    color: var(--purple);
+                }
+
+                .onHover {
+                    display: var(--display-inline-block);
+                    vertical-align: sub;
+                }
+
+                .offHover {
+                    display: var(--display-none);
+                }
+            }
+
+            .onHover {
+                display: var(--display-none);
+            }
+
+            .offHover {
+                display: var(--display-inline-block);
+                vertical-align: sub;
+            }
+
+            a {
+                color: var(--white);
+                font-size: 20px;
+                padding-left: 16px;
+                font-weight: var(--font-weight-medium);
+            }
+        }
+    }
+
+    &__socialIcons {
+        li {
+            display: var(--display-inline-block);
+            margin: 0 15px;
+
+            a {
+                height: 64px;
+                width: 64px;
+                border-radius: 50%;
+                display: var(--display-flex);
+                align-items: var(--center);
+                justify-content: var(--center);
+
+                &:hover {
+                    background-color: var(--white);
+                    svg {
+                        path {
+                            fill: var(--purple);
+                        }
+                    }
+                }
+                svg {
+                    path {
+                        fill: var(--white);
+                    }
+                }
+            }
+        }
+    }
+
+    &__form {
+        background-color: var(--white);
+        border-radius: 24px;
+        padding: 48px 40px;
+
+        h3 {
+            color: var(--purple);
+            margin-bottom: 48px;
+        }
+
+        &-field {
+            margin-bottom: 40px;
+        }
+
+        .button-primary {
+            margin-top: 55px;
+            width: auto;
+            border-radius: 6px !important;
+
+            &:focus {
+                border-radius: 6px !important;
+            }
+        }
+    }
+}
+
+.wpcf7-form-control-wrap {
+    margin-bottom: 40px;
+    display: block;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: $large-tablet-size) {
+    .contactUs {
+        h2 {
+            font-size: 20px;
+        }
+
+        &__reachOut {
+            margin: 45px 0px 25px;
+            li {
+                padding: 10px;
+                margin-bottom: 15px;
+
+                &.active {
+                    border-radius: 6px;
+                }
+
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &__socialIcons {
+            margin-bottom: 30px;
+            text-align: center;
+
+            li {
+                margin: 0px 10px;
+            }
+        }
+
+        &__form {
+            background-color: var(--white);
+            border-radius: 24px;
+            padding: 48px 15px;
+
+            h3 {
+                color: var(--purple);
+                margin-bottom: 48px;
+            }
+
+            &-field {
+                margin-bottom: 40px;
+            }
+
+            .button-primary {
+                margin-top: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.sectionPrivacyPolicy {
+    &__welcomePolicy {
+        background: var(--purple);
+        padding: 16px;
+        color: var(--white);
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    ol {
+        margin-bottom: 30px;
+
+        li {
+            color: var(--gray);
+        }
+
+        li + li {
+            margin-top: 5px;
+        }
+    }
+
+    &__updatedDate {
+        margin-top: 24px;
+        color: var(--purple);
+    }
+}
+
+@media (max-width: $large-tablet-size) {
+    .sectionPrivacyPolicy {
+        p,
+        ol {
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            margin-bottom: 5px;
+        }
+    }
+}

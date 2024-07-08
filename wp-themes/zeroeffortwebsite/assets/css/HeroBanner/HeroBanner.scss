@@ -1,0 +1,69 @@
+.heroBanner {
+    background-image: url(../images/HeroBannerBg.webp);
+    background-size: var(--cover);
+    padding-top: 200px;
+    padding-bottom: 95px;
+    background-attachment: var(--position-fixed);
+    position: var(--position-relative);
+
+    h3 {
+        color: var(--white);
+        margin-bottom: 25px;
+        font-weight: var(--font-weight-medium);
+    }
+
+    h1 {
+        color: var(--white);
+        margin-bottom: 33px;
+    }
+
+    p {
+        color: var(--white);
+        margin-bottom: 30px;
+    }
+
+    &__scrollToSection {
+        position: var(--position-absolute);
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: var(--auto);
+        text-align: var(--center);
+
+        a {
+            img {
+                animation: up-down 2s ease-in-out infinite both;
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: $large-tablet-size) {
+    .heroBanner {
+        padding-top: 110px;
+        &__PreviewImg {
+            margin-bottom: 30px;
+        }
+        &__scrollToSection {
+            bottom: 20px;
+        }
+    }
+}
+
+@keyframes up-down {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-20%);
+        transform: translateY(-20%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}

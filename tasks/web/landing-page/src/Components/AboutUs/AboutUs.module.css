@@ -1,0 +1,30 @@
+.aboutUs {
+    padding: 86px 0px 56px;
+    text-align: center;
+}
+
+.aboutUs h2 {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.aboutUs p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 44px;
+}
+
+
+@media screen and (max-width: 991px) {
+    .aboutUs h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .aboutUs p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

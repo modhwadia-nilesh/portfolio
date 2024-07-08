@@ -1,0 +1,116 @@
+.gridSection {
+    background-image: url("/images/GridBgImage.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 733px;
+    position: relative;
+    align-items: end;
+    overflow: hidden;
+}
+
+.gridSection::before {
+    content: "";
+    background-color: #072d3a;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.grid {
+    flex: 0 0 auto;
+    width: 25%;
+    padding: 60px 40px;
+    z-index: 1;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+.grid h3 {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 57px;
+}
+
+.grid p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.active {
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.active::before {
+    content: "";
+    background-color: #072d3a;
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid #072d3a;
+    border-left: 2px solid #072d3a;
+}
+
+.active h3 {
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.deactive {
+    transition: all 0.5s ease-in-out;
+}
+
+.deactive p {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.active p {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
+}
+
+.active svg {
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .gridSection {
+        height: 100%;
+        background-image: none;
+    }
+    .grid {
+        background-image: url("/images/GridBgImage.png");
+        background-size: cover;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gridSection {
+        display: block;
+    }
+
+    .grid {
+        width: 100%;
+    }
+}

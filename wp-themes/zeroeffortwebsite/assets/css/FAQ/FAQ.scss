@@ -1,0 +1,53 @@
+.faq {
+    .accordion-item {
+        margin-bottom: 25px;
+        box-shadow: 0px 25px 50px rgba(22, 25, 79, 0.05);
+        border: 0.5px solid #cad6f1;
+        border-radius: 20px;
+        background: var(--white);
+
+        .accordion-button {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            color: var(--black);
+            font-size: 22px;
+            font-weight: var(--font-weight-bold);
+            background-color: transparent;
+            border: var(--display-none);
+
+            &::after {
+                background-image: url("../images/AccordionNotCollapsed.svg");
+                background-position: var(--center);
+            }
+
+            &:not(.collapsed) {
+                box-shadow: var(--display-none);
+
+                &::after {
+                    background-image: url("../images/AccordionCollapsed.svg");
+                }
+            }
+
+            &:focus {
+                box-shadow: var(--display-none);
+            }
+        }
+
+        .accordion-body {
+            border: var(--display-none);
+            color: var(--gray);
+        }
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: $large-tablet-size) {
+    .faq {
+        .accordion-item {
+            .accordion-button {
+                font-size: 18px;
+            }
+        }
+    }
+}

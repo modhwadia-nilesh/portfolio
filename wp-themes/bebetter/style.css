@@ -1,0 +1,61 @@
+/*
+Theme Name: BeBetter
+Version: 1.0
+*/
+#subscription_form.wpcf7-form:not(.init) .wpcf7-response-output,
+#contact_us_form .wpcf7-response-output {
+	color: #fff;
+	margin: 0.5em 0.5em 1em;
+}
+
+footer.bg-white #subscription_form.wpcf7-form:not(.init) .wpcf7-response-output {
+	color: #000;
+}
+
+#subscription_form input[type="email"]{
+	width: 100%;
+}
+
+#subscription_form.wpcf7-form{
+	flex-wrap: wrap;
+}
+
+#subscription_form.wpcf7-form input[type="email"]{
+	border-radius: 5px 0px 0px 5px
+}
+
+#subscription_form .wpcf7-form-control-wrap{
+	width: 70%;
+}
+
+.testimonials .grid .grid-item {
+	display: -webkit-inline-box;
+}
+
+@media screen and (max-width: 991px){
+	
+	#subscription_form .wpcf7-not-valid-tip{
+		display: none;
+	}
+	
+	#subscription_form .wpcf7-form-control-wrap{
+		width: 70%;
+	}
+}
+@media screen and (max-width:375px) {
+	
+	#subscription_form .wpcf7-form-control-wrap{
+		width: 100%;
+	}
+	
+	#subscription_form.wpcf7-form input[type="email"]{
+		border-radius: 5px 5px 5px 5px;
+	}
+	
+	#subscription_form.wpcf7-form input[type="submit"]{
+		width: 100%;
+		margin-top: 10px;
+		border-radius: 5px 5px 5px 5px;
+	}
+	
+}

@@ -1,0 +1,52 @@
+.button-primary {
+    background-image: var(--btn-background);
+    background-size: 300% var(--width-hundred);
+    color: var(--white);
+    text-transform: var(--text-uppercase);
+    padding: var(--btn-padding) !important;
+    position: var(--position-relative);
+    border-radius: var(--btn-border-radius);
+    font-size: 16px;
+    moz-transition: var(--other-transition);
+    -o-transition: var(--other-transition);
+    -webkit-transition: var(--other-transition);
+    transition: var(--other-transition);
+    font-weight: var(--font-weight-bold);
+    display: var(--display-inline-block);
+
+    &:hover {
+        background-image: var(--btn-hover-background);
+        background-position: var(--width-hundred) 0;
+        color: var(--white);
+        moz-transition: var(--other-transition);
+        -o-transition: var(--other-transition);
+        -webkit-transition: var(--other-transition);
+        transition: var(--other-transition);
+    }
+}
+
+.button-primary-rounded {
+    background-image: var(--btn-background);
+    background-size: 300% var(--width-hundred);
+    color: var(--white);
+    text-transform: var(--text-uppercase);
+    padding: var(--btn-rounded-padding) !important;
+    position: var(--position-relative);
+    border-radius: 60px;
+    font-size: 16px;
+    moz-transition: var(--other-transition);
+    -o-transition: var(--other-transition);
+    -webkit-transition: var(--other-transition);
+    transition: var(--other-transition);
+    display: var(--display-inline-block);
+
+    &:hover {
+        background-image: var(--btn-hover-background);
+        background-position: var(--width-hundred) 0;
+        color: var(--white);
+        moz-transition: var(--other-transition);
+        -o-transition: var(--other-transition);
+        -webkit-transition: var(--other-transition);
+        transition: var(--other-transition);
+    }
+}

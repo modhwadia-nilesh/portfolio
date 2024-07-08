@@ -1,0 +1,163 @@
+.pricing {
+    .title {
+        p {
+            max-width: 605px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__info {
+        margin-bottom: 24px;
+        padding: 50px 20px;
+        padding-bottom: 40px;
+        border-radius: 20px;
+        background-color: $white;
+        box-shadow: 0px 4px 25.29px 0px #000000ab;
+        border: 2px solid $darkGrey;
+
+        h5 {
+            font-weight: 600;
+            color: $orange;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            position: relative;
+            color: $black;
+            margin-bottom: 10px;
+
+            span {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 22px;
+                vertical-align: middle;
+                color: $grey;
+                position: absolute;
+                margin-left: 2px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        p {
+            color: $black;
+            margin-bottom: 40px;
+        }
+
+        h6 {
+            color: $black;
+            margin-bottom: 19px;
+        }
+
+        .pricing__list {
+            li {
+                padding-left: 36px;
+                position: relative;
+                color: $black;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 21px;
+                    height: 20px;
+                    background: url("../images/circleWrite.png") no-repeat;
+                    background-size: cover;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            li+li {
+                margin-top: 12px;
+            }
+        }
+
+        .button-secondary {
+            display: flex;
+            width: max-content;
+            margin: 0 auto;
+            margin-top: 30px;
+
+            &:hover {
+                background-color: $darkGrey;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .pricing {
+        .row {
+            justify-content: center;
+
+            .col-lg-4.col-md-6.col-sm-6 {
+                margin-bottom: 24px;
+            }
+        }
+
+        &__info {
+            padding: 30px 20px;
+            height: 100%;
+            margin-bottom: 0;
+
+            h5 {
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                margin-bottom: 8px;
+
+                span {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            h6 {
+                margin-bottom: 14px;
+            }
+
+            .pricing__list {
+                li {
+                    padding-left: 26px;
+
+                    &:after {
+                        width: 19px;
+                        height: 18px;
+                        top: 1px;
+                    }
+                }
+
+                li+li {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing {
+        .row {
+            .col-lg-4.col-md-6.col-sm-6 {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__info {
+            margin-bottom: 0;
+
+            p {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

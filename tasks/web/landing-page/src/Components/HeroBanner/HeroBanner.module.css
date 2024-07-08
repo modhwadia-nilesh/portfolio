@@ -1,0 +1,56 @@
+.heroBanner {
+    background-image: url("/images/HeroBannerBG.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 740px;
+    position: relative;
+}
+
+.heroBannerWrapper {
+    position: absolute;
+    bottom: 76px;
+    left: 0;
+    right: 0;
+}
+
+.heroBanner h2 {
+    color: #ffffff;
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 20px;
+}
+
+.heroBanner p {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Univers 45";
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 991px) {
+    .heroBanner {
+        height: 592px;
+    }
+
+    .heroBannerWrapper {
+        bottom: 76px;
+        left: 0;
+        right: 0;
+    }
+
+    .heroBanner h2 {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 20px;
+    }
+
+    .heroBanner p {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 70%;
+    }
+}

@@ -1,0 +1,278 @@
+footer {
+  background-color: $black;
+
+  .footer__left {
+    .logo {
+      display: inline-block;
+      margin-bottom: 20px;
+      margin-left: -5px;
+
+      img {
+        max-width: 230px;
+        width: 100%;
+      }
+    }
+
+    p {
+      line-height: 22px;
+      max-width: 455px;
+      color: $white;
+      margin-bottom: 30px;
+    }
+
+    .footer__socialIcon {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 20px;
+
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          border-radius: 50%;
+          padding: 7px;
+          background-color: $white;
+          border: 0;
+
+          img {
+            max-width: 26px;
+            width: 100%;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    h6 {
+      color: $white;
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+
+    .footer__email {
+      max-width: 444px;
+
+      form {
+        display: flex;
+        background-color: transparent;
+        padding-right: 0;
+        overflow: hidden;
+
+        input {
+          padding: 10px 12px;
+          color: $darkGrey;
+          border: 0;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 17px;
+          outline: none;
+          box-shadow: none;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+
+          &::placeholder {
+            color: $darkGrey;
+          }
+        }
+
+        .submit-button {
+          display: inline-block;
+          width: fit-content;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 17px;
+          color: $white;
+          max-height: 37px;
+          padding: 10px 14px;
+          background-color: $orange;
+          transition: all 0.5s;
+          border-radius: 0;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+          &:hover {
+            color: $darkGrey;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__links {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-top: 74px;
+
+    li {
+      display: inline-block;
+
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        color: $white;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+
+    li+li {
+      margin-top: 10px;
+    }
+  }
+
+  .footer__copyright {
+    padding-top: 40px;
+    padding-bottom: 14px;
+
+    p {
+      color: $white;
+
+      a {
+        color: $orange;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &.bg-white {
+    background-color: $white;
+    padding: 53px 0;
+
+    .footer__left {
+      p {
+        color: $black;
+      }
+
+      .footer__socialIcon {
+        li {
+          a {
+            padding: 0;
+          }
+        }
+      }
+
+      .footer__email {
+        form {
+          background-color: transparent;
+
+          input {
+            background-color: $darkGrey;
+            color: $white;
+
+            &::placeholder {
+              color: $white;
+            }
+          }
+
+          .submit-button {
+            background-color: $orange;
+          }
+        }
+      }
+
+      h6 {
+        color: $darkGrey;
+      }
+    }
+
+    .footer__links {
+      li {
+        a {
+          color: $darkGrey;
+
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+
+    .footer__copyright {
+      p {
+        color: $darkGrey;
+
+        a {
+          &:hover {
+            color: $darkGrey;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  footer {
+    .footer__left {
+      .footer__email {
+        form {
+          input {
+            padding: 8px 12px;
+          }
+
+          .submit-button {
+            padding: 8px 12px;
+            max-height: 33px;
+          }
+        }
+      }
+    }
+
+    .footer__copyright {
+      padding-bottom: 0;
+      padding-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    &.bg-white {
+      padding: 30px 0;
+    }
+
+    .footer__top {
+      margin-bottom: 40px;
+
+      .footer__links {
+        padding-top: 0;
+      }
+    }
+
+    .footer__left {
+      margin-bottom: 20px;
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      p {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .footer__email {
+        max-width: 100%;
+      }
+
+      .footer__socialIcon {
+        gap: 14px;
+      }
+    }
+
+    .footer__copyright {
+      padding-top: 0;
+    }
+  }
+}

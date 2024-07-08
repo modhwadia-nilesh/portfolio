@@ -1,0 +1,27 @@
+.videoSection {
+    position: relative;
+    padding-bottom: 163px;
+}
+
+.modalVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 126px;
+    width: 126px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .videoSection {
+        padding-bottom: 85px;
+    }
+
+    .modalVideo {
+        height: 42px;
+        width: 42px;
+    }
+}

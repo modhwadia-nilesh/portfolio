@@ -1,0 +1,46 @@
+.secondaryHeroBanner {
+    background-image: url("../images/SecondaryHeroBannerImage.webp");
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+
+    &::after {
+        content: "";
+        background: linear-gradient(90deg, #5f39ff 0%, #0070ff 35%, #008cff 71.5%, #009cff 100%);
+        height: 12px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    h1 {
+        margin: 0;
+        color: var(--white);
+
+        span {
+            font-size: 56px;
+        }
+    }
+
+    p {
+        color: var(--white);
+    }
+
+    .calendly-inline-widget {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: $large-tablet-size) {
+    .secondaryHeroBanner {
+        h1 {
+            span {
+                font-size: 38px;
+            }
+        }
+    }
+}

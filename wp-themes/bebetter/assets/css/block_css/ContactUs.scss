@@ -1,0 +1,340 @@
+.contact__us {
+  &-image {
+    position: relative;
+    margin-right: 10px;
+    height: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 190px;
+      background: linear-gradient(
+        180deg,
+        rgba(217, 217, 217, 0) 0%,
+        $black 100%
+      );
+      bottom: 0;
+      left: 0;
+    }
+    img {
+      max-width: 411px;
+      width: 100%;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .contact__us-imgText {
+      position: absolute;
+      display: block;
+      width: 100%;
+      padding: 22px 27px;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      text-align: left;
+      p {
+        color: $white;
+      }
+    }
+  }
+  &-details {
+    padding-left: 10px;
+    h3 {
+      margin-bottom: 14px;
+      color: $white;
+    }
+    p {
+      margin-bottom: 30px;
+      color: $white;
+    }
+    form {
+      .contact__us-inputBox {
+        display: block;
+        padding: 10px 16px;
+        padding-top: 25px;
+        padding-left: 59px;
+        border-radius: 5px;
+        border: 1px solid #ffffff80;
+        background-color: transparent;
+        margin-bottom: 16px;
+        position: relative;
+
+        .icon-img {
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          background: transparent;
+          left: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        label {
+          position: absolute;
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: 500;
+          color: $white;
+          top: 21px;
+          left: 59px;
+          transition: all 0.5s;
+        }
+        input {
+          position: relative;
+          width: 100%;
+          font-size: 16px;
+          font-weight: 500;
+          color: $white;
+          line-height: 19px;
+          background-color: transparent;
+          outline: none;
+          box-shadow: none;
+          border: 0;
+          &::placeholder {
+            color: $white;
+          }
+        }
+
+        input:focus + label,
+        input:not(:placeholder-shown) + label {
+          top: 10px;
+          font-size: 12px;
+          opacity: 1;
+          font-weight: 400;
+          line-height: 15px;
+        }
+        .wpcf7-form-control-wrap:has(input:focus) ~ label,
+        .wpcf7-form-control-wrap:has(input:not(:placeholder-shown)) + label {
+          top: 10px;
+          font-size: 12px;
+          opacity: 1;
+          font-weight: 400;
+          line-height: 15px;
+        }
+      }
+      .contact__us-textAreaBox {
+        display: block;
+        padding: 18px 16px;
+        padding-top: 22px;
+        border-radius: 5px;
+        border: 1px solid #ffffff80;
+        background-color: transparent;
+        margin-bottom: 32px;
+        position: relative;
+
+        label {
+          position: absolute;
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: 500;
+          color: $white;
+          top: 18px;
+          left: 16px;
+          transition: all 0.5s;
+        }
+        textarea {
+          width: 100%;
+          font-size: 16px;
+          color: $white;
+          font-weight: 500;
+          line-height: 19px;
+          margin-top: 2px;
+          background-color: transparent;
+          outline: none;
+          box-shadow: none;
+          border: 0;
+          &::placeholder {
+            color: $white;
+          }
+        }
+        textarea:focus + label,
+        textarea:not(:placeholder-shown) + label {
+          top: 6px;
+          font-size: 12px;
+          opacity: 1;
+          font-weight: 400;
+          line-height: 15px;
+        }
+        .wpcf7-form-control-wrap:has(textarea:focus) ~ label,
+        .wpcf7-form-control-wrap:has(textarea:not(:placeholder-shown)) + label {
+          top: 6px;
+          font-size: 12px;
+          opacity: 1;
+          font-weight: 400;
+          line-height: 15px;
+        }
+      }
+
+      .submit-button {
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        line-height: 22px;
+        border-radius: 5px;
+        background-color: $white;
+        color: $darkGrey;
+        font-weight: 500;
+        padding: 16px 14px;
+        box-shadow: none;
+        border: 0;
+        transition: all 0.5s;
+        &:hover {
+          background-color: $orange;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact__us {
+    &-image {
+      .contact__us-imgText {
+        padding: 22px;
+      }
+    }
+    &-details {
+      form {
+        .submit-button {
+          padding: 10px 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .contact__us {
+    &-image {
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 40px;
+      img {
+        max-width: 100%;
+      }
+      .contact__us-imgText {
+        padding: 20px;
+      }
+    }
+    &-details {
+      padding-left: 0;
+      p {
+        margin-bottom: 16px;
+      }
+      form {
+        .contact__us-inputBox {
+          padding: 8px 16px;
+          padding-top: 22px;
+          padding-left: 52px;
+          input {
+            font-size: 15px;
+          }
+          label {
+            top: 17px;
+            font-size: 15px;
+            left: 52px;
+          }
+          input:focus + label,
+          input:not(:placeholder-shown) + label {
+            top: 8px;
+          }
+          .wpcf7-form-control-wrap:has(input:focus) ~ label,
+          .wpcf7-form-control-wrap:has(input:not(:placeholder-shown)) + label {
+            top: 8px;
+          }
+        }
+        .contact__us-textAreaBox {
+          padding: 16px;
+          padding-top: 18px;
+          margin-bottom: 16px;
+          textarea {
+            font-size: 15px;
+          }
+          label {
+            top: 16px;
+            font-size: 15px;
+          }
+          textarea:focus + label,
+          textarea:not(:placeholder-shown) + label {
+            top: 5px;
+          }
+          .wpcf7-form-control-wrap:has(textarea:focus) ~ label,
+          .wpcf7-form-control-wrap:has(textarea:not(:placeholder-shown))
+            + label {
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact__us {
+    &-image {
+      height: auto;
+      margin-bottom: 30px;
+    }
+    &-details {
+      form {
+        .contact__us-inputBox {
+          padding: 6px 14px;
+          padding-top: 20px;
+          padding-left: 46px;
+
+          .icon-img {
+            width: 20px;
+            height: 20px;
+            left: 14px;
+          }
+          input {
+            font-size: 14px;
+          }
+
+          label {
+            top: 16px;
+            font-size: 14px;
+            left: 46px;
+          }
+          input:focus + label,
+          input:not(:placeholder-shown) + label {
+            top: 6px;
+          }
+          .wpcf7-form-control-wrap:has(input:focus) ~ label,
+          .wpcf7-form-control-wrap:has(input:not(:placeholder-shown)) + label {
+            top: 6px;
+          }
+        }
+
+        .contact__us-textAreaBox {
+          padding: 14px;
+          padding-top: 18px;
+
+          textarea {
+            font-size: 14px;
+          }
+          label {
+            font-size: 14px;
+            left: 14px;
+            top: 14px;
+          }
+          textarea:focus + label,
+          textarea:not(:placeholder-shown) + label {
+            top: 5px;
+          }
+          .wpcf7-form-control-wrap:has(textarea:focus) ~ label,
+          .wpcf7-form-control-wrap:has(textarea:not(:placeholder-shown))
+            + label {
+            top: 5px;
+          }
+        }
+        .submit-button {
+          font-size: 16px;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+}

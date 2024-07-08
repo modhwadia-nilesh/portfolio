@@ -1,0 +1,40 @@
+.ZeroObligationsChat {
+    background-image: url("../images/BgPattern.webp"), url("../images/BgPattern.webp"), url("../images/BgPattern.webp");
+    background-position:
+        right var(--center),
+        var(--center) top,
+        right bottom;
+    background-repeat: no-repeat;
+    .title {
+        text-align: center;
+
+        h2 {
+            &::before {
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 30px;
+        text-align: center;
+
+        h5 {
+            color: var(--gray);
+            font-weight: 500;
+        }
+    }
+
+    .calendly-inline-widget {
+        height: 660px;
+    }
+}
+
+@media screen and (max-width: $small-laptop-size) {
+    .ZeroObligationsChat {
+        .calendly-inline-widget {
+            height: 1115px;
+        }
+    }
+}

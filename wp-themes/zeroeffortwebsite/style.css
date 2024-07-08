@@ -1,0 +1,11 @@
+/*
+Theme Name: Zero Effort Website
+Version: 1.0
+*/
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .heroBanner__PreviewImg, .oneStopWebSolution__previewImg, .whyChoose__Image {
+    display: none;
+  }
+}
